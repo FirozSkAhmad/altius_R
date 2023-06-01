@@ -1,0 +1,170 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100px;
+  border-bottom: 1px solid rgb(0, 0, 0);
+}
+
+.logo-con {
+  margin-left: 50px;
+  max-width: 120px;
+  min-width: 50px;
+}
+
+.logo-con img {
+  width: 100%;
+}
+
+.nav-con {
+  margin-left: 10px;
+  margin-right: 20px;
+  flex: 1;
+}
+
+ul {
+  display: flex;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+ul li {
+  list-style-type: none;
+  white-space: nowrap;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+ul li:hover {
+  color: rgb(255, 134, 48);
+}
+
+.arrow {
+  font-size: 12px;
+  margin-left: 5px;
+}
+
+.aboutUs {
+  position: relative;
+}
+
+.aboutUs-con {
+  position: absolute;
+  top: 50px;
+  width: 400px;
+  height: 400px;
+  padding: 50px;
+  background-color: white;
+  border: none;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  opacity: 1;
+  pointer-events: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 20px;
+}
+
+.aboutUsBox {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 5px 0;
+  padding-left: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.aboutUsBox:hover {
+  background-color: rgba(255, 134, 48, 0.6);
+  color: black;
+}
+
+.aboutUs:active .aboutUs-con {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.contact-con {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 18px;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.contact-con button {
+  background-color: rgb(255, 134, 48);
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 3px;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.contact-con button:hover {
+  background-color: rgb(25, 42, 72);
+}
+.box {
+  width: 30px;
+  background-color: rgb(255, 134, 48);
+  padding: 4px;
+  border-radius: 4px;
+  cursor: pointer;
+  display: none;
+  margin-right: 10px;
+  flex-shrink: 0;
+}
+
+.smallLine {
+  width: 100%;
+  height: 2px;
+  margin-bottom: 2px;
+  margin-top: 2px;
+  background-color: white;
+}
+
+.middleLine {
+  width: 100%;
+  height: 3px;
+  background-color: white;
+}
+
+@media (max-width: 1024px) and (min-width: 765px) {
+  .logo-con {
+    margin-left: 10px;
+  }
+  .nav-con {
+    display: none;
+  }
+  .contact-con button {
+    border-radius: 20px;
+  }
+  .box {
+    display: block;
+  }
+}
+
+@media (max-width: 764px) {
+  .logo-con {
+    margin-left: 10px;
+  }
+  .nav-con {
+    display: none;
+  }
+  .contact-con button {
+    border-radius: 20px;
+    font-size: 10px;
+    padding: 4px 10px;
+  }
+  .box {
+    display: block;
+  }
+}
